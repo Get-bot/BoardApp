@@ -165,8 +165,7 @@ public class BoardDAO {
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, '%'+key+'%');
-			rs = pstmt.executeQuery();
-			
+			rs = pstmt.executeQuery();	
 			while(rs.next()) {
 				bDTO = new BoardDTO();
 				bDTO.setBnumber(rs.getInt("BNUMBER"));
