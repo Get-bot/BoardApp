@@ -4,6 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+      table{
+            margin: 0;
+            padding: 0;
+        }</style>
 <script >
 function search() {
 	var keyword = document.getElementById("keyword").value;
@@ -13,10 +18,10 @@ function search() {
 <meta charset="UTF-8">
 <title>BoardList.jsp</title>
 </head>
-<body>
+<body >
 <input type="text" id="keyword" placeholder="검색어 입력">
-<button onclick="search()">검색</button>
-	<table border="1">
+<button onclick="search()">검색</button><br> <br>
+	<table border="1" >
 	<tr>
 		<th>글번호</th> <th>작성자</th> <th>제목</th>
 		<th>작성일자</th> <th>조회수</th></tr>
@@ -28,9 +33,10 @@ function search() {
 			<!--  글제목 클릭 했을떄 boardview 주소를 요청하고 bnumber를 가지고 가야함. -->
 			<td>${board.bdate}</td>
 			<td>${board.bhits}</td>
-			</tr><br>
+			</tr>
 		</c:forEach>
 	</table>
+<button onclick="location.href='BoardWriteFile.jsp'">파일글쓰기</button>
 
 </body>
 </html>

@@ -24,7 +24,9 @@
 	<table border="1">
 	<tr>
 		<th>글번호</th> <th>작성자</th> <th>제목</th>
-		<th>내용</th><th>작성일자</th> <th>조회수</th></tr>
+		<th>내용</th><th>작성일자</th> <th>조회수</th>
+		<th>첨부파일</th> <th>파일이미지</th>>
+		</tr>
 			<tr>
 			<td>${boardView.bnumber}</td>
 			<td>${boardView.bwriter}</td>
@@ -32,6 +34,8 @@
 			<td>${boardView.bcontents}</td>
 			<td>${boardView.bdate}</td>
 			<td>${boardView.bhits}</td>
+			<td>${boardView.bfilename}</td>
+			<td><img src="UploadFile/${boardView.bfilename}" width="200" height="200"></td>
 			</tr> 
 	</table> <br>
 	<button onclick="BoardList()">글목록</button>
